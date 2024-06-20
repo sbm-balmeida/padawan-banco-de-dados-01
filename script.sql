@@ -46,3 +46,12 @@ PRECO_LISTA) VALUES (
 4.56);
 
 SELECT * FROM tbproduto; #comando para selecionar tudo da tabela tbproduto
+
+#Desafio Aula-04
+INSERT INTO tabela_de_vendedores(
+MATRICULA, 
+NOME, 
+PERCENTUAL_COMISSAO) VALUES(
+'00233', 
+'João Geraldo da Fonseca', 
+0.10);
