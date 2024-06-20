@@ -81,19 +81,34 @@ SEXO, LIMITE_CREDITO, VOLUME_COMPRA, PRIMEIRA_COMPRA, DATA_NASCIMENTO) VALUES (
 -------------------------------------------------------------------
 
 #Desafio Aula-04
-INSERT INTO tabela_de_vendedores(
-MATRICULA, NOME, PERCENTUAL_COMISSAO) VALUES(
-'00233', 'João Geraldo da Fonseca', 0.10);
-
-INSERT INTO tabela_de_vendedores(
-MATRICULA, NOME, PERCENTUAL_COMISSAO) VALUES (
-'00235', 'Márcio Almeida Silva', 0.08);
-
-INSERT INTO tabela_de_vendedores(
-MATRICULA, NOME, PERCENTUAL_COMISSAO) VALUES (
-'00236', 'Cláudia Morais', 0.08);
-
 UPDATE tabela_de_vendedores SET PERCENTUAL_COMISSAO = 0.11 WHERE MATRICULA = '00236';
 UPDATE tabela_de_vendedores SET NOME = 'José Geraldo da Fonseca Junior' WHERE MATRICULA = '00233';
 
 DELETE FROM tabela_de_vendedores WHERE MATRICULA = '00233';
+
+DROP TABLE tabela_de_vendedores;
+
+CREATE TABLE tabela_de_vendedores (
+MATRICULA varchar(5),
+NOME varchar(100),
+PERCENTUAL_COMISSAO float,
+DATA_ADMISSAO date,
+DE_FERIAS bit);
+
+ALTER TABLE tabela_de_vendedores ADD PRIMARY KEY (MATRICULA);
+
+INSERT INTO tabela_de_vendedores (
+MATRICULA, NOME, DATA_ADMISSAO, PERCENTUAL_COMISSAO, DE_FERIAS) VALUES (
+'00235','Márcio Almeida Silva','2014-08-15',0.08,0);
+
+INSERT INTO tabela_de_vendedores (
+MATRICULA, NOME, DATA_ADMISSAO, PERCENTUAL_COMISSAO, DE_FERIAS) VALUES (
+'00236','Cláudia Morais','2013-09-17',0.08,1);
+
+INSERT INTO tabela_de_vendedores (
+MATRICULA, NOME, DATA_ADMISSAO, PERCENTUAL_COMISSAO, DE_FERIAS) VALUES (
+'00237','Roberta Martins','2017-03-18',0.11,1);
+
+INSERT INTO tabela_de_vendedores (
+MATRICULA, NOME, DATA_ADMISSAO, PERCENTUAL_COMISSAO, DE_FERIAS) VALUES (
+'00238','Pericles Alves','2016-08-21',0.11,0);
