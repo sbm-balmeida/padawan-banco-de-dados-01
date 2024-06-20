@@ -19,11 +19,11 @@ LIMITE_CREDITO FLOAT,
 VOLUME_COMPRA FLOAT,
 PRIMEIRA_COMPRA BIT(1))
 
+USE Sucos; #comando para selecionar um banco
+
+DROP TABLE tbcliente3; #comando para apagar uma tabela
+
 #Desafio Aula-03
 CREATE TABLE TABELA_DE_VENDEDORES (
 NOME VARCHAR(100), 
 PERCENTUAL_COMISSAO FLOAT);
-
-USE Sucos; #comando para selecionar um banco
-
-DROP TABLE tbcliente3; #comando para apagar uma tabela
