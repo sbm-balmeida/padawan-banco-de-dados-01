@@ -55,6 +55,8 @@ SELECT * FROM tbproduto; #comando para selecionar tudo da tabela tbproduto
 
 UPDATE tbproduto SET EMBALAGEM = 'Lata', PRECO_LISTA = 2.46 WHERE PRODUTO = '544931'; #comando para atualizar os valores da tabela
 UPDATE tbproduto SET EMBALAGEM = 'Garrafa' WHERE PRODUTO = '1078680';
+
+DELETE FROM tbproduto WHERE PRODUTO = '1078680'; #apagar alguma informação dentro da tabela
 -------------------------------------------------------------------
 #Desafio Aula-04
 INSERT INTO tabela_de_vendedores(
