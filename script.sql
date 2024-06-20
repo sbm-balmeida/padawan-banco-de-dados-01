@@ -35,11 +35,11 @@ INSERT INTO tbproduto ( #comando para inserir dados na tabela
 PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA) VALUES (
 '1037797', 'Clean - 2 Litros - Laranja','PET', '2 Litros', 'Laranja', 16.0);
 
-INSERT INTO tbproduto ( #comando para inserir dados na tabela
+INSERT INTO tbproduto ( 
 PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA) VALUES (
 '1000889', 'Sabor da Montanha - 700 ml - Uva', 'Garrafa', '700 ml', 'Uva', 6.31);
 
-INSERT INTO tbproduto ( #comando para inserir dados na tabela
+INSERT INTO tbproduto ( 
 PRODUTO, NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA) VALUES (
 '1004327', 'Videira do Campo - 1,5 Litros - Melancia', 'PET', '1,5 Litros', 'Melancia', 19.51);
 
@@ -51,12 +51,16 @@ INSERT INTO tbproduto (
 PRODUTO,  NOME, EMBALAGEM, TAMANHO, SABOR, PRECO_LISTA) VALUES (
 '1078680', 'Frescor do Verão - 470 ml - Manga', 'Lata', '470 ml','Manga',5.18);
 
-SELECT * FROM tbproduto; #comando para selecionar tudo da tabela tbproduto
+SELECT * FROM tbproduto; #comando para selecionar e exibir tudo da tabela tbproduto
 
 UPDATE tbproduto SET EMBALAGEM = 'Lata', PRECO_LISTA = 2.46 WHERE PRODUTO = '544931'; #comando para atualizar os valores da tabela
 UPDATE tbproduto SET EMBALAGEM = 'Garrafa' WHERE PRODUTO = '1078680';
 
-DELETE FROM tbproduto WHERE PRODUTO = '1078680'; #apagar alguma informação dentro da tabela
+DELETE FROM tbproduto WHERE PRODUTO = '1078680'; #comando para apagar alguma informação dentro da tabela
+
+ALTER TABLE tbproduto ADD PRIMARY KEY (PRODUTO); 
+#comando ALTER TABLE para alterar uma propriedade de uma tabela que já existe ex:tbproduto
+#comandao ADD PRIMARY KEY para adicionar uma chave primaria em PRODUTO
 -------------------------------------------------------------------
 #Desafio Aula-04
 INSERT INTO tabela_de_vendedores(
