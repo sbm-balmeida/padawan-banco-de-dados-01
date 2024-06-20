@@ -27,6 +27,10 @@ DROP TABLE tbcliente3; #comando para apagar uma tabela
 
 -------------------------------------------------------------------
 
+USE Sucos; #comando para selecionar um banco
+
+DROP TABLE tbcliente3; #comando para apagar uma tabela
+
 #Desafio Aula-03
 CREATE TABLE TABELA_DE_VENDEDORES (
 NOME VARCHAR(100), 
