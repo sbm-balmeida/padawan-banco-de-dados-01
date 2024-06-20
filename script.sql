@@ -21,6 +21,9 @@ PRIMEIRA_COMPRA BIT(1))
 
 #Desafio Aula-03
 CREATE TABLE TABELA_DE_VENDEDORES (
-MATRICULA VARCHAR(5), 
 NOME VARCHAR(100), 
 PERCENTUAL_COMISSAO FLOAT);
+
+USE Sucos; #comando para selecionar um banco
+
+DROP TABLE tbcliente3; #comando para apagar uma tabela
