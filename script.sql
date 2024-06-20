@@ -2,7 +2,9 @@
 CREATE DATABASE SUCOS; #comando para cria banco
 
 DROP DATABASE SUCOS; #comando para apagar banco
--------------------------------------------------------------
+
+-------------------------------------------------------------------
+
 #Aula-03
 CREATE TABLE tbCliente #comando para criar tabela
 (CPF VARCHAR(11),
@@ -22,12 +24,16 @@ PRIMEIRA_COMPRA BIT(1));
 USE Sucos; #comando para selecionar um banco
 
 DROP TABLE tbcliente3; #comando para apagar uma tabela
-----------------------------------------------------------------
+
+-------------------------------------------------------------------
+
 #Desafio Aula-03
 CREATE TABLE TABELA_DE_VENDEDORES (
 NOME VARCHAR(100), 
 PERCENTUAL_COMISSAO FLOAT);
-----------------------------------------------------------------
+
+-------------------------------------------------------------------
+
 #Aula-04
 USE Sucos;
 
@@ -61,7 +67,19 @@ DELETE FROM tbproduto WHERE PRODUTO = '1078680'; #comando para apagar alguma inf
 ALTER TABLE tbproduto ADD PRIMARY KEY (PRODUTO); 
 #comando ALTER TABLE para alterar uma propriedade de uma tabela que já existe ex:tbproduto
 #comandao ADD PRIMARY KEY para adicionar uma chave primaria em PRODUTO
+
+ALTER TABLE tbcliente ADD PRIMARY KEY (CPF);
+
+ALTER TABLE tbcliente ADD COLUMN (DATA_NASCIMENTO DATE); #comando ADD COLUMN irá adicionar uma coluna na tabela tbcliente
+
+INSERT INTO tbcliente (
+CPF, NOME, ENDERECO1, ENDERECO2, BAIRRO, CIDADE, ESTADO, CEP, IDADE,
+SEXO, LIMITE_CREDITO, VOLUME_COMPRA, PRIMEIRA_COMPRA, DATA_NASCIMENTO) VALUES (
+'00388934505', 'João da Silva', 'Rua projetada A número 10', '', 'Vila Roman', 
+'CARATINGA', 'AM', '2222222', 30, 'M', 10000.00, 2000, 0, '1989-10-05');
+
 -------------------------------------------------------------------
+
 #Desafio Aula-04
 INSERT INTO tabela_de_vendedores(
 MATRICULA, NOME, PERCENTUAL_COMISSAO) VALUES(
