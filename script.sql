@@ -208,19 +208,19 @@ SELECT CPF  AS CPF_CLIENTE, NOME AS NOME_CLIENTE FROM tbcliente; #comando irá a
 SELECT NOME, CPF, SEXO, IDADE, DATA_NASCIMENTO FROM tbcliente;
 
 SELECT * FROM tbcliente WHERE CIDADE = 'Rio de Janeiro';
+SELECT * FROM tbcliente WHERE CIDADE = 'Rio de Janeiro' OR BAIRRO = 'Jardins'; #comando para exibir quem mora no Rio de Janeiro OU no bairro Jardins
 
 SELECT * FROM tbcliente WHERE IDADE > 22; #comando para exbir quem tiver a idade MAIOR do que 22
-
 SELECT * FROM tbcliente WHERE IDADE < 22; #comando para exbir quem tiver a idade MENOR do que 22
-
 SELECT * FROM tbcliente WHERE IDADE <= 22; #comando para exbir quem tiver a idade MENOR OU IGUAL do que 22
-
 SELECT * FROM tbcliente WHERE IDADE <> 22; #comando para exbir quem tiver a idade DIFERENTE do que 22
+SELECT * FROM tbcliente	WHERE IDADE >= 18 AND IDADE <= 22 AND SEXO = 'M';
 
 SELECT * FROM tbproduto	WHERE PRECO_LISTA BETWEEN 16.007 AND 16.009; #comando para exibir um float que esta entre dois valores
+SELECT * FROM tbproduto WHERE PRECO_LISTA >= 16.007 AND PRECO_LISTA <= 16.009; #comando para exibir um float que esta entre dois valores
 
 SELECT * FROM tbcliente WHERE DATA_NASCIMENTO = '1995-01-13';
-
 SELECT * FROM tbcliente WHERE YEAR(DATA_NASCIMENTO) = 1995; # comando para exibir quem nasceu no ANO de 1995
-
 SELECT * FROM tbcliente WHERE MONTH(DATA_NASCIMENTO) = 10; # comando para exibir quem nasceu no MÊS 10
+
+SELECT * FROM tbcliente	WHERE (IDADE >= 18 AND IDADE <= 22 AND SEXO = 'M') OR (CIDADE = 'Rio de Janeiro' OR BAIRRO = 'Jardins'); #comando para exebir filtros compostos
