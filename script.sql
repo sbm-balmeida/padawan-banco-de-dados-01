@@ -218,3 +218,9 @@ SELECT * FROM tbcliente WHERE IDADE <= 22; #comando para exbir quem tiver a idad
 SELECT * FROM tbcliente WHERE IDADE <> 22; #comando para exbir quem tiver a idade DIFERENTE do que 22
 
 SELECT * FROM tbproduto	WHERE PRECO_LISTA BETWEEN 16.007 AND 16.009; #comando para exibir um float que esta entre dois valores
+
+SELECT * FROM tbcliente WHERE DATA_NASCIMENTO = '1995-01-13';
+
+SELECT * FROM tbcliente WHERE YEAR(DATA_NASCIMENTO) = 1995; # comando para exibir quem nasceu no ANO de 1995
+
+SELECT * FROM tbcliente WHERE MONTH(DATA_NASCIMENTO) = 10; # comando para exibir quem nasceu no MÊS 10
