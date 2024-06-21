@@ -206,3 +206,5 @@ SELECT CPF, NOME FROM tbcliente LIMIT 5; #comando irá exibir os primeiros 5 da 
 SELECT CPF  AS CPF_CLIENTE, NOME AS NOME_CLIENTE FROM tbcliente; #comando irá alterar o nome exibido da coluna
 
 SELECT NOME, CPF, SEXO, IDADE, DATA_NASCIMENTO FROM tbcliente;
+
+SELECT * FROM tbcliente WHERE CIDADE = 'Rio de Janeiro';
