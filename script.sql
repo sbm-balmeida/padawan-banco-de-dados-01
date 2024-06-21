@@ -208,3 +208,13 @@ SELECT CPF  AS CPF_CLIENTE, NOME AS NOME_CLIENTE FROM tbcliente; #comando irá a
 SELECT NOME, CPF, SEXO, IDADE, DATA_NASCIMENTO FROM tbcliente;
 
 SELECT * FROM tbcliente WHERE CIDADE = 'Rio de Janeiro';
+
+SELECT * FROM tbcliente WHERE IDADE > 22; #comando para exbir quem tiver a idade MAIOR do que 22
+
+SELECT * FROM tbcliente WHERE IDADE < 22; #comando para exbir quem tiver a idade MENOR do que 22
+
+SELECT * FROM tbcliente WHERE IDADE <= 22; #comando para exbir quem tiver a idade MENOR OU IGUAL do que 22
+
+SELECT * FROM tbcliente WHERE IDADE <> 22; #comando para exbir quem tiver a idade DIFERENTE do que 22
+
+SELECT * FROM tbproduto	WHERE PRECO_LISTA BETWEEN 16.007 AND 16.009; #comando para exibir um float que esta entre dois valores
